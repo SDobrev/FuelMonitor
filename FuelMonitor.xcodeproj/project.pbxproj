@@ -1,0 +1,599 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		579DA77A1C63A12D009B83C6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 579DA7791C63A12D009B83C6 /* main.m */; };
+		579DA77D1C63A12D009B83C6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 579DA77C1C63A12D009B83C6 /* AppDelegate.m */; };
+		579DA7801C63A12D009B83C6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 579DA77F1C63A12D009B83C6 /* ViewController.m */; };
+		579DA7831C63A12D009B83C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 579DA7811C63A12D009B83C6 /* Main.storyboard */; };
+		579DA7851C63A12D009B83C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 579DA7841C63A12D009B83C6 /* Assets.xcassets */; };
+		579DA7881C63A12E009B83C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 579DA7861C63A12E009B83C6 /* LaunchScreen.storyboard */; };
+		579DA7931C63A12E009B83C6 /* FuelMonitorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 579DA7921C63A12E009B83C6 /* FuelMonitorTests.m */; };
+		579DA79E1C63A12E009B83C6 /* FuelMonitorUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 579DA79D1C63A12E009B83C6 /* FuelMonitorUITests.m */; };
+		8F745F23D89EA6920B55E157 /* libPods-FuelMonitor.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1183A3DCEA61B0659D30772B /* libPods-FuelMonitor.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		579DA78F1C63A12E009B83C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 579DA76D1C63A12D009B83C6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 579DA7741C63A12D009B83C6;
+			remoteInfo = FuelMonitor;
+		};
+		579DA79A1C63A12E009B83C6 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 579DA76D1C63A12D009B83C6 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 579DA7741C63A12D009B83C6;
+			remoteInfo = FuelMonitor;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		003A753C7A307DA840C4E35E /* Pods-FuelMonitor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FuelMonitor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FuelMonitor/Pods-FuelMonitor.debug.xcconfig"; sourceTree = "<group>"; };
+		1183A3DCEA61B0659D30772B /* libPods-FuelMonitor.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FuelMonitor.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3EFE9C5B1A224F52EEEC66E0 /* Pods-FuelMonitor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FuelMonitor.release.xcconfig"; path = "Pods/Target Support Files/Pods-FuelMonitor/Pods-FuelMonitor.release.xcconfig"; sourceTree = "<group>"; };
+		579DA7751C63A12D009B83C6 /* FuelMonitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FuelMonitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		579DA7791C63A12D009B83C6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		579DA77B1C63A12D009B83C6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		579DA77C1C63A12D009B83C6 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		579DA77E1C63A12D009B83C6 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		579DA77F1C63A12D009B83C6 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		579DA7821C63A12D009B83C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		579DA7841C63A12D009B83C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		579DA7871C63A12E009B83C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		579DA7891C63A12E009B83C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		579DA78E1C63A12E009B83C6 /* FuelMonitorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FuelMonitorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		579DA7921C63A12E009B83C6 /* FuelMonitorTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FuelMonitorTests.m; sourceTree = "<group>"; };
+		579DA7941C63A12E009B83C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		579DA7991C63A12E009B83C6 /* FuelMonitorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FuelMonitorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		579DA79D1C63A12E009B83C6 /* FuelMonitorUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FuelMonitorUITests.m; sourceTree = "<group>"; };
+		579DA79F1C63A12E009B83C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		579DA7721C63A12D009B83C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F745F23D89EA6920B55E157 /* libPods-FuelMonitor.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		579DA78B1C63A12E009B83C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		579DA7961C63A12E009B83C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		579DA76C1C63A12D009B83C6 = {
+			isa = PBXGroup;
+			children = (
+				579DA7771C63A12D009B83C6 /* FuelMonitor */,
+				579DA7911C63A12E009B83C6 /* FuelMonitorTests */,
+				579DA79C1C63A12E009B83C6 /* FuelMonitorUITests */,
+				579DA7761C63A12D009B83C6 /* Products */,
+				A6022DE7E1253F14BB3D7412 /* Pods */,
+				EB35CCB4CE639BD14640230C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		579DA7761C63A12D009B83C6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				579DA7751C63A12D009B83C6 /* FuelMonitor.app */,
+				579DA78E1C63A12E009B83C6 /* FuelMonitorTests.xctest */,
+				579DA7991C63A12E009B83C6 /* FuelMonitorUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		579DA7771C63A12D009B83C6 /* FuelMonitor */ = {
+			isa = PBXGroup;
+			children = (
+				579DA77B1C63A12D009B83C6 /* AppDelegate.h */,
+				579DA77C1C63A12D009B83C6 /* AppDelegate.m */,
+				579DA77E1C63A12D009B83C6 /* ViewController.h */,
+				579DA77F1C63A12D009B83C6 /* ViewController.m */,
+				579DA7811C63A12D009B83C6 /* Main.storyboard */,
+				579DA7841C63A12D009B83C6 /* Assets.xcassets */,
+				579DA7861C63A12E009B83C6 /* LaunchScreen.storyboard */,
+				579DA7891C63A12E009B83C6 /* Info.plist */,
+				579DA7781C63A12D009B83C6 /* Supporting Files */,
+			);
+			path = FuelMonitor;
+			sourceTree = "<group>";
+		};
+		579DA7781C63A12D009B83C6 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				579DA7791C63A12D009B83C6 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		579DA7911C63A12E009B83C6 /* FuelMonitorTests */ = {
+			isa = PBXGroup;
+			children = (
+				579DA7921C63A12E009B83C6 /* FuelMonitorTests.m */,
+				579DA7941C63A12E009B83C6 /* Info.plist */,
+			);
+			path = FuelMonitorTests;
+			sourceTree = "<group>";
+		};
+		579DA79C1C63A12E009B83C6 /* FuelMonitorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				579DA79D1C63A12E009B83C6 /* FuelMonitorUITests.m */,
+				579DA79F1C63A12E009B83C6 /* Info.plist */,
+			);
+			path = FuelMonitorUITests;
+			sourceTree = "<group>";
+		};
+		A6022DE7E1253F14BB3D7412 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				003A753C7A307DA840C4E35E /* Pods-FuelMonitor.debug.xcconfig */,
+				3EFE9C5B1A224F52EEEC66E0 /* Pods-FuelMonitor.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EB35CCB4CE639BD14640230C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1183A3DCEA61B0659D30772B /* libPods-FuelMonitor.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		579DA7741C63A12D009B83C6 /* FuelMonitor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 579DA7A21C63A12E009B83C6 /* Build configuration list for PBXNativeTarget "FuelMonitor" */;
+			buildPhases = (
+				149826D8C4D00B9C1EE742F1 /* Check Pods Manifest.lock */,
+				579DA7711C63A12D009B83C6 /* Sources */,
+				579DA7721C63A12D009B83C6 /* Frameworks */,
+				579DA7731C63A12D009B83C6 /* Resources */,
+				54EA2BD6421A0FF5ECAB3894 /* Embed Pods Frameworks */,
+				F698BA7132DEB64E5D91B5E7 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FuelMonitor;
+			productName = FuelMonitor;
+			productReference = 579DA7751C63A12D009B83C6 /* FuelMonitor.app */;
+			productType = "com.apple.product-type.application";
+		};
+		579DA78D1C63A12E009B83C6 /* FuelMonitorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 579DA7A51C63A12E009B83C6 /* Build configuration list for PBXNativeTarget "FuelMonitorTests" */;
+			buildPhases = (
+				579DA78A1C63A12E009B83C6 /* Sources */,
+				579DA78B1C63A12E009B83C6 /* Frameworks */,
+				579DA78C1C63A12E009B83C6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				579DA7901C63A12E009B83C6 /* PBXTargetDependency */,
+			);
+			name = FuelMonitorTests;
+			productName = FuelMonitorTests;
+			productReference = 579DA78E1C63A12E009B83C6 /* FuelMonitorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		579DA7981C63A12E009B83C6 /* FuelMonitorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 579DA7A81C63A12E009B83C6 /* Build configuration list for PBXNativeTarget "FuelMonitorUITests" */;
+			buildPhases = (
+				579DA7951C63A12E009B83C6 /* Sources */,
+				579DA7961C63A12E009B83C6 /* Frameworks */,
+				579DA7971C63A12E009B83C6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				579DA79B1C63A12E009B83C6 /* PBXTargetDependency */,
+			);
+			name = FuelMonitorUITests;
+			productName = FuelMonitorUITests;
+			productReference = 579DA7991C63A12E009B83C6 /* FuelMonitorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		579DA76D1C63A12D009B83C6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = SDobrev;
+				TargetAttributes = {
+					579DA7741C63A12D009B83C6 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+					579DA78D1C63A12E009B83C6 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 579DA7741C63A12D009B83C6;
+					};
+					579DA7981C63A12E009B83C6 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 579DA7741C63A12D009B83C6;
+					};
+				};
+			};
+			buildConfigurationList = 579DA7701C63A12D009B83C6 /* Build configuration list for PBXProject "FuelMonitor" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 579DA76C1C63A12D009B83C6;
+			productRefGroup = 579DA7761C63A12D009B83C6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				579DA7741C63A12D009B83C6 /* FuelMonitor */,
+				579DA78D1C63A12E009B83C6 /* FuelMonitorTests */,
+				579DA7981C63A12E009B83C6 /* FuelMonitorUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		579DA7731C63A12D009B83C6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				579DA7881C63A12E009B83C6 /* LaunchScreen.storyboard in Resources */,
+				579DA7851C63A12D009B83C6 /* Assets.xcassets in Resources */,
+				579DA7831C63A12D009B83C6 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		579DA78C1C63A12E009B83C6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		579DA7971C63A12E009B83C6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		149826D8C4D00B9C1EE742F1 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		54EA2BD6421A0FF5ECAB3894 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FuelMonitor/Pods-FuelMonitor-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F698BA7132DEB64E5D91B5E7 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FuelMonitor/Pods-FuelMonitor-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		579DA7711C63A12D009B83C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				579DA7801C63A12D009B83C6 /* ViewController.m in Sources */,
+				579DA77D1C63A12D009B83C6 /* AppDelegate.m in Sources */,
+				579DA77A1C63A12D009B83C6 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		579DA78A1C63A12E009B83C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				579DA7931C63A12E009B83C6 /* FuelMonitorTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		579DA7951C63A12E009B83C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				579DA79E1C63A12E009B83C6 /* FuelMonitorUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		579DA7901C63A12E009B83C6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 579DA7741C63A12D009B83C6 /* FuelMonitor */;
+			targetProxy = 579DA78F1C63A12E009B83C6 /* PBXContainerItemProxy */;
+		};
+		579DA79B1C63A12E009B83C6 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 579DA7741C63A12D009B83C6 /* FuelMonitor */;
+			targetProxy = 579DA79A1C63A12E009B83C6 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		579DA7811C63A12D009B83C6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				579DA7821C63A12D009B83C6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		579DA7861C63A12E009B83C6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				579DA7871C63A12E009B83C6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		579DA7A01C63A12E009B83C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		579DA7A11C63A12E009B83C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		579DA7A31C63A12E009B83C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 003A753C7A307DA840C4E35E /* Pods-FuelMonitor.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FuelMonitor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = SD.FuelMonitor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		579DA7A41C63A12E009B83C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3EFE9C5B1A224F52EEEC66E0 /* Pods-FuelMonitor.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FuelMonitor/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = SD.FuelMonitor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		579DA7A61C63A12E009B83C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FuelMonitorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = SD.FuelMonitorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FuelMonitor.app/FuelMonitor";
+			};
+			name = Debug;
+		};
+		579DA7A71C63A12E009B83C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FuelMonitorTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = SD.FuelMonitorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FuelMonitor.app/FuelMonitor";
+			};
+			name = Release;
+		};
+		579DA7A91C63A12E009B83C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FuelMonitorUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = SD.FuelMonitorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FuelMonitor;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		579DA7AA1C63A12E009B83C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FuelMonitorUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = SD.FuelMonitorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FuelMonitor;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		579DA7701C63A12D009B83C6 /* Build configuration list for PBXProject "FuelMonitor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				579DA7A01C63A12E009B83C6 /* Debug */,
+				579DA7A11C63A12E009B83C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		579DA7A21C63A12E009B83C6 /* Build configuration list for PBXNativeTarget "FuelMonitor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				579DA7A31C63A12E009B83C6 /* Debug */,
+				579DA7A41C63A12E009B83C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		579DA7A51C63A12E009B83C6 /* Build configuration list for PBXNativeTarget "FuelMonitorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				579DA7A61C63A12E009B83C6 /* Debug */,
+				579DA7A71C63A12E009B83C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		579DA7A81C63A12E009B83C6 /* Build configuration list for PBXNativeTarget "FuelMonitorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				579DA7A91C63A12E009B83C6 /* Debug */,
+				579DA7AA1C63A12E009B83C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 579DA76D1C63A12D009B83C6 /* Project object */;
+}
