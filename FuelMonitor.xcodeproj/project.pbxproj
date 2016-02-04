@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		575C8B511C63C3960048105C /* DMVehicle.m in Sources */ = {isa = PBXBuildFile; fileRef = 575C8B501C63C3960048105C /* DMVehicle.m */; };
+		575C8B551C63C3E80048105C /* DMFuelEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 575C8B541C63C3E80048105C /* DMFuelEntry.m */; };
+		575C8B581C63C9C60048105C /* AddVehicleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 575C8B571C63C9C60048105C /* AddVehicleViewController.m */; };
+		575C8B5B1C63CCAB0048105C /* CurrentPricesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 575C8B5A1C63CCAB0048105C /* CurrentPricesViewController.m */; };
+		575C8B5E1C63CCF60048105C /* AddFuelEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 575C8B5D1C63CCF60048105C /* AddFuelEntryViewController.m */; };
 		579DA77A1C63A12D009B83C6 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 579DA7791C63A12D009B83C6 /* main.m */; };
 		579DA77D1C63A12D009B83C6 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 579DA77C1C63A12D009B83C6 /* AppDelegate.m */; };
 		579DA7801C63A12D009B83C6 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 579DA77F1C63A12D009B83C6 /* ViewController.m */; };
@@ -39,6 +44,16 @@
 		003A753C7A307DA840C4E35E /* Pods-FuelMonitor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FuelMonitor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FuelMonitor/Pods-FuelMonitor.debug.xcconfig"; sourceTree = "<group>"; };
 		1183A3DCEA61B0659D30772B /* libPods-FuelMonitor.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FuelMonitor.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EFE9C5B1A224F52EEEC66E0 /* Pods-FuelMonitor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FuelMonitor.release.xcconfig"; path = "Pods/Target Support Files/Pods-FuelMonitor/Pods-FuelMonitor.release.xcconfig"; sourceTree = "<group>"; };
+		575C8B4F1C63C3960048105C /* DMVehicle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMVehicle.h; sourceTree = "<group>"; };
+		575C8B501C63C3960048105C /* DMVehicle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMVehicle.m; sourceTree = "<group>"; };
+		575C8B531C63C3E80048105C /* DMFuelEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMFuelEntry.h; sourceTree = "<group>"; };
+		575C8B541C63C3E80048105C /* DMFuelEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMFuelEntry.m; sourceTree = "<group>"; };
+		575C8B561C63C9C60048105C /* AddVehicleViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddVehicleViewController.h; sourceTree = "<group>"; };
+		575C8B571C63C9C60048105C /* AddVehicleViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddVehicleViewController.m; sourceTree = "<group>"; };
+		575C8B591C63CCAB0048105C /* CurrentPricesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CurrentPricesViewController.h; sourceTree = "<group>"; };
+		575C8B5A1C63CCAB0048105C /* CurrentPricesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CurrentPricesViewController.m; sourceTree = "<group>"; };
+		575C8B5C1C63CCF60048105C /* AddFuelEntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddFuelEntryViewController.h; sourceTree = "<group>"; };
+		575C8B5D1C63CCF60048105C /* AddFuelEntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddFuelEntryViewController.m; sourceTree = "<group>"; };
 		579DA7751C63A12D009B83C6 /* FuelMonitor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FuelMonitor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		579DA7791C63A12D009B83C6 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		579DA77B1C63A12D009B83C6 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -83,6 +98,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		575C8B4D1C63C3480048105C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				575C8B4F1C63C3960048105C /* DMVehicle.h */,
+				575C8B501C63C3960048105C /* DMVehicle.m */,
+				575C8B531C63C3E80048105C /* DMFuelEntry.h */,
+				575C8B541C63C3E80048105C /* DMFuelEntry.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		575C8B4E1C63C3580048105C /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				579DA77E1C63A12D009B83C6 /* ViewController.h */,
+				579DA77F1C63A12D009B83C6 /* ViewController.m */,
+				575C8B561C63C9C60048105C /* AddVehicleViewController.h */,
+				575C8B571C63C9C60048105C /* AddVehicleViewController.m */,
+				575C8B591C63CCAB0048105C /* CurrentPricesViewController.h */,
+				575C8B5A1C63CCAB0048105C /* CurrentPricesViewController.m */,
+				575C8B5C1C63CCF60048105C /* AddFuelEntryViewController.h */,
+				575C8B5D1C63CCF60048105C /* AddFuelEntryViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
 		579DA76C1C63A12D009B83C6 = {
 			isa = PBXGroup;
 			children = (
@@ -108,10 +149,10 @@
 		579DA7771C63A12D009B83C6 /* FuelMonitor */ = {
 			isa = PBXGroup;
 			children = (
+				575C8B4E1C63C3580048105C /* ViewController */,
+				575C8B4D1C63C3480048105C /* Models */,
 				579DA77B1C63A12D009B83C6 /* AppDelegate.h */,
 				579DA77C1C63A12D009B83C6 /* AppDelegate.m */,
-				579DA77E1C63A12D009B83C6 /* ViewController.h */,
-				579DA77F1C63A12D009B83C6 /* ViewController.m */,
 				579DA7811C63A12D009B83C6 /* Main.storyboard */,
 				579DA7841C63A12D009B83C6 /* Assets.xcassets */,
 				579DA7861C63A12E009B83C6 /* LaunchScreen.storyboard */,
@@ -347,7 +388,12 @@
 			files = (
 				579DA7801C63A12D009B83C6 /* ViewController.m in Sources */,
 				579DA77D1C63A12D009B83C6 /* AppDelegate.m in Sources */,
+				575C8B551C63C3E80048105C /* DMFuelEntry.m in Sources */,
 				579DA77A1C63A12D009B83C6 /* main.m in Sources */,
+				575C8B511C63C3960048105C /* DMVehicle.m in Sources */,
+				575C8B5E1C63CCF60048105C /* AddFuelEntryViewController.m in Sources */,
+				575C8B5B1C63CCAB0048105C /* CurrentPricesViewController.m in Sources */,
+				575C8B581C63C9C60048105C /* AddVehicleViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
