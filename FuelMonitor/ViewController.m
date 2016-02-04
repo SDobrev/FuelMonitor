@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import "AddVehicleViewController.h"
+#import "AddFuelEntryViewController.h"
+#import "CurrentPricesViewController.h"
 #import <ParseUI/ParseUI.h>
 
 @interface ViewController ()
@@ -29,8 +31,17 @@
                                         initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
                                         target:self
                                         action:@selector(showAddVehicle)];
+    UIBarButtonItem *addFuelSceneBarButton = [[UIBarButtonItem alloc]
+                                            initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
+                                            target:self
+                                            action:@selector(showAddFuelEntry)];
+    UIBarButtonItem *currentPricesSceneBarButton = [[UIBarButtonItem alloc]
+                                              initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
+                                              target:self
+                                              action:@selector(showCurrentPrices)];
     
-    self.navigationItem.rightBarButtonItem = addVehicleBarButton;
+    
+    self.navigationItem.rightBarButtonItems = [NSArray arrayWithObjects:addVehicleBarButton, addFuelSceneBarButton,currentPricesSceneBarButton, nil];
     self.navigationItem.leftBarButtonItem = loginBarButton;
 }
 
@@ -50,5 +61,19 @@
     AddVehicleViewController *addVehicleViewController =
     [self.storyboard instantiateViewControllerWithIdentifier:storyBoardId];
     [self.navigationController pushViewController:addVehicleViewController animated:YES];
+}
+
+- (void) showAddFuelEntry {
+    NSString *storyBoardId = @"addFuelScene";
+    AddFuelEntryViewController *addFuelEntryViewController =
+    [self.storyboard instantiateViewControllerWithIdentifier:storyBoardId];
+    [self.navigationController pushViewController:addFuelEntryViewController animated:YES];
+}
+
+- (void) showCurrentPrices {
+    NSString *storyBoardId = @"currentPricesScene";
+    CurrentPricesViewController *currentPricesViewController =
+    [self.storyboard instantiateViewControllerWithIdentifier:storyBoardId];
+    [self.navigationController pushViewController:currentPricesViewController animated:YES];
 }
 @end
