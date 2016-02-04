@@ -30,10 +30,4 @@
     logInViewController.delegate = self;
     [self presentViewController:logInViewController animated:YES completion:nil];
 }
--(void) showLogin {
-    PFLogInViewController *logInViewController = [[PFLogInViewController alloc] init];
-    logInViewController.delegate = self;
-    [self presentViewController:logInViewController animated:YES completion:nil];
-}
-
 @end
