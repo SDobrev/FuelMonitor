@@ -10,4 +10,8 @@
 
 @interface DMFuelEntry : NSObject
 
+@property double *quantity;
+@property double *trip;
+@property double *price;
+
 @end

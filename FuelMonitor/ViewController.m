@@ -39,9 +39,13 @@
                                               initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
                                               target:self
                                               action:@selector(showCurrentPrices)];
+    UIBarButtonItem *mainSceneBarButton = [[UIBarButtonItem alloc]
+                                                    initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
+                                                    target:self
+                                                    action:@selector(showMain)];
     
     
-    self.navigationItem.rightBarButtonItems = [NSArray arrayWithObjects:addVehicleBarButton, addFuelSceneBarButton,currentPricesSceneBarButton, nil];
+    self.navigationItem.rightBarButtonItems = [NSArray arrayWithObjects:addVehicleBarButton, addFuelSceneBarButton,currentPricesSceneBarButton, mainSceneBarButton, nil];
     self.navigationItem.leftBarButtonItem = loginBarButton;
 }
 
@@ -75,5 +79,11 @@
     CurrentPricesViewController *currentPricesViewController =
     [self.storyboard instantiateViewControllerWithIdentifier:storyBoardId];
     [self.navigationController pushViewController:currentPricesViewController animated:YES];
+}
+- (void) showMain {
+    NSString *storyBoardId = @"mainScene";
+    CurrentPricesViewController *mainViewController =
+    [self.storyboard instantiateViewControllerWithIdentifier:storyBoardId];
+    [self.navigationController pushViewController:mainViewController animated:YES];
 }
 @end

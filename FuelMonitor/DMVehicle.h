@@ -7,7 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Parse/Parse.h>
 
 @interface DMVehicle : NSObject
+
+@property (nonatomic, strong) NSString *make;
+@property (nonatomic, strong) NSString *model;
+@property (nonatomic, strong) NSString *year;
+@property (nonatomic, strong) PFFile *imageFile;
 
 @end

@@ -10,4 +10,8 @@
 
 @implementation DMFuelEntry
 
+@synthesize quantity;
+@synthesize trip;
+@synthesize price;
+
 @end

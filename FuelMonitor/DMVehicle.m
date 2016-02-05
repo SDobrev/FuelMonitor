@@ -10,4 +10,9 @@
 
 @implementation DMVehicle
 
+@synthesize make;
+@synthesize model;
+@synthesize year;
+@synthesize imageFile;
+
 @end

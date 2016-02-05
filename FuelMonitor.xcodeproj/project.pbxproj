@@ -20,6 +20,7 @@
 		579DA7881C63A12E009B83C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 579DA7861C63A12E009B83C6 /* LaunchScreen.storyboard */; };
 		579DA7931C63A12E009B83C6 /* FuelMonitorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 579DA7921C63A12E009B83C6 /* FuelMonitorTests.m */; };
 		579DA79E1C63A12E009B83C6 /* FuelMonitorUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 579DA79D1C63A12E009B83C6 /* FuelMonitorUITests.m */; };
+		57B503B81C6509A5006A3E78 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B503B71C6509A5006A3E78 /* MainViewController.m */; };
 		8F745F23D89EA6920B55E157 /* libPods-FuelMonitor.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1183A3DCEA61B0659D30772B /* libPods-FuelMonitor.a */; };
 /* End PBXBuildFile section */
 
@@ -70,6 +71,8 @@
 		579DA7991C63A12E009B83C6 /* FuelMonitorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FuelMonitorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		579DA79D1C63A12E009B83C6 /* FuelMonitorUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FuelMonitorUITests.m; sourceTree = "<group>"; };
 		579DA79F1C63A12E009B83C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		57B503B61C6509A5006A3E78 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		57B503B71C6509A5006A3E78 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +123,8 @@
 				575C8B5A1C63CCAB0048105C /* CurrentPricesViewController.m */,
 				575C8B5C1C63CCF60048105C /* AddFuelEntryViewController.h */,
 				575C8B5D1C63CCF60048105C /* AddFuelEntryViewController.m */,
+				57B503B61C6509A5006A3E78 /* MainViewController.h */,
+				57B503B71C6509A5006A3E78 /* MainViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -390,6 +395,7 @@
 				579DA77D1C63A12D009B83C6 /* AppDelegate.m in Sources */,
 				575C8B551C63C3E80048105C /* DMFuelEntry.m in Sources */,
 				579DA77A1C63A12D009B83C6 /* main.m in Sources */,
+				57B503B81C6509A5006A3E78 /* MainViewController.m in Sources */,
 				575C8B511C63C3960048105C /* DMVehicle.m in Sources */,
 				575C8B5E1C63CCF60048105C /* AddFuelEntryViewController.m in Sources */,
 				575C8B5B1C63CCAB0048105C /* CurrentPricesViewController.m in Sources */,
@@ -533,10 +539,13 @@
 			baseConfigurationReference = 003A753C7A307DA840C4E35E /* Pods-FuelMonitor.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = FuelMonitor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SD.FuelMonitor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FuelMonitor/FuelMonitor-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -545,10 +554,12 @@
 			baseConfigurationReference = 3EFE9C5B1A224F52EEEC66E0 /* Pods-FuelMonitor.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = FuelMonitor/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = SD.FuelMonitor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "FuelMonitor/FuelMonitor-Bridging-Header.h";
 			};
 			name = Release;
 		};
