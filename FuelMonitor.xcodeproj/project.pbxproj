@@ -21,6 +21,8 @@
 		579DA7931C63A12E009B83C6 /* FuelMonitorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 579DA7921C63A12E009B83C6 /* FuelMonitorTests.m */; };
 		579DA79E1C63A12E009B83C6 /* FuelMonitorUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 579DA79D1C63A12E009B83C6 /* FuelMonitorUITests.m */; };
 		57B503B81C6509A5006A3E78 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B503B71C6509A5006A3E78 /* MainViewController.m */; };
+		57B503BD1C6524EA006A3E78 /* VehicleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57B503BC1C6524EA006A3E78 /* VehicleCell.xib */; };
+		57B503C01C652873006A3E78 /* VehicleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B503BF1C652873006A3E78 /* VehicleCell.m */; };
 		8F745F23D89EA6920B55E157 /* libPods-FuelMonitor.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1183A3DCEA61B0659D30772B /* libPods-FuelMonitor.a */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +75,9 @@
 		579DA79F1C63A12E009B83C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		57B503B61C6509A5006A3E78 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
 		57B503B71C6509A5006A3E78 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		57B503BC1C6524EA006A3E78 /* VehicleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VehicleCell.xib; sourceTree = "<group>"; };
+		57B503BE1C652873006A3E78 /* VehicleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VehicleCell.h; sourceTree = "<group>"; };
+		57B503BF1C652873006A3E78 /* VehicleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VehicleCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +159,7 @@
 		579DA7771C63A12D009B83C6 /* FuelMonitor */ = {
 			isa = PBXGroup;
 			children = (
+				57B503B91C6521B0006A3E78 /* Views */,
 				575C8B4E1C63C3580048105C /* ViewController */,
 				575C8B4D1C63C3480048105C /* Models */,
 				579DA77B1C63A12D009B83C6 /* AppDelegate.h */,
@@ -191,6 +197,16 @@
 				579DA79F1C63A12E009B83C6 /* Info.plist */,
 			);
 			path = FuelMonitorUITests;
+			sourceTree = "<group>";
+		};
+		57B503B91C6521B0006A3E78 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				57B503BC1C6524EA006A3E78 /* VehicleCell.xib */,
+				57B503BE1C652873006A3E78 /* VehicleCell.h */,
+				57B503BF1C652873006A3E78 /* VehicleCell.m */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 		A6022DE7E1253F14BB3D7412 /* Pods */ = {
@@ -316,6 +332,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57B503BD1C6524EA006A3E78 /* VehicleCell.xib in Resources */,
 				579DA7881C63A12E009B83C6 /* LaunchScreen.storyboard in Resources */,
 				579DA7851C63A12D009B83C6 /* Assets.xcassets in Resources */,
 				579DA7831C63A12D009B83C6 /* Main.storyboard in Resources */,
@@ -397,6 +414,7 @@
 				579DA77A1C63A12D009B83C6 /* main.m in Sources */,
 				57B503B81C6509A5006A3E78 /* MainViewController.m in Sources */,
 				575C8B511C63C3960048105C /* DMVehicle.m in Sources */,
+				57B503C01C652873006A3E78 /* VehicleCell.m in Sources */,
 				575C8B5E1C63CCF60048105C /* AddFuelEntryViewController.m in Sources */,
 				575C8B5B1C63CCAB0048105C /* CurrentPricesViewController.m in Sources */,
 				575C8B581C63C9C60048105C /* AddVehicleViewController.m in Sources */,

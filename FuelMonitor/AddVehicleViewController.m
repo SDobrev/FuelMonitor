@@ -51,12 +51,12 @@
 }
 
 - (IBAction)save:(id)sender {
-    // Create PFObject with recipe information
-    PFObject *recipe = [PFObject objectWithClassName:@"Vehicle"];
-    [recipe setObject: self.makeTextField.text forKey:@"make"];
-    [recipe setObject: self.modelTextField.text forKey:@"model"];
-    [recipe setObject: self.yearTextField.text forKey:@"year"];
-    
+    // Create PFObject with vehicle information
+    PFObject *vehicle = [PFObject objectWithClassName:@"Vehicle"];
+    [vehicle setObject: self.makeTextField.text forKey:@"make"];
+    [vehicle setObject: self.modelTextField.text forKey:@"model"];
+    [vehicle setObject: self.yearTextField.text forKey:@"year"];
+     vehicle.ACL = [PFACL ACLWithUser:[PFUser currentUser]];
     // Recipe image
 //    NSData *imageData = UIImageJPEGRepresentation(_vehicleImageView.image, 0.8);
 //    NSString *filename = [NSString stringWithFormat:@"%@.png", _modelTextField.text];
@@ -69,8 +69,8 @@
 //    hud.labelText = @"Uploading";
 //    [hud show:YES];
     
-    // Upload recipe to Parse
-    [recipe saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+    // Upload vehicle to Parse
+    [vehicle saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
  //       [hud hide:YES];
         
         if (!error) {
@@ -96,16 +96,5 @@
 - (IBAction)cancel:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
-
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

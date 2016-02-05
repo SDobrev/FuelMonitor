@@ -110,10 +110,10 @@
     }
     
     // Configure the cell
-//    UILabel *makeLabel = (UILabel*) [cell viewWithTag:100];
-//    makeLabel.text = [object objectForKey:@"make"];
-//    UILabel *modelLabel = (UILabel*) [cell viewWithTag:101];
-//    modelLabel.text = [object objectForKey:@"model"];
+    UILabel *makeLabel = (UILabel*) [cell viewWithTag:100];
+    makeLabel.text = [object objectForKey:@"make"];
+    UILabel *modelLabel = (UILabel*) [cell viewWithTag:101];
+    modelLabel.text = [object objectForKey:@"model"];
     return cell;
 }
 
@@ -125,7 +125,28 @@
         [self refreshTable:nil];
     }];
 }
-
+//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object
+//{
+//    static NSString *simpleTableIdentifier = @"VehicleCell";
+//    
+//    VehicleCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+//    if (cell == nil) {
+//        cell = [[[NSBundle mainBundle] loadNibNamed:@"VehicleCell" owner:self options:nil] objectAtIndex:0];
+//        //        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+//    }
+//    
+//    // Configure the cell
+//    //    UILabel *makeLabel = (UILabel*) [cell viewWithTag:100];
+//    //    makeLabel.text = [object objectForKey:@"make"];
+//    //    UILabel *modelLabel = (UILabel*) [cell viewWithTag:101];
+//    //    modelLabel.text = [object objectForKey:@"model"];
+//    
+//    cell.modelLabel.text = @"sadas";
+//    //    cell.modelLabel.text = [object objectForKey:@"model"];
+//    //    cell.yearLabel.text = [object objectForKey:@"year"];
+//    
+//    return cell;
+//}
 - (void) objectsDidLoad:(NSError *)error
 {
     [super objectsDidLoad:error];
