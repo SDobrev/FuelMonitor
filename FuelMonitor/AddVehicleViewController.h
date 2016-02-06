@@ -8,6 +8,5 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddVehicleViewController : UIViewController
-
+@interface AddVehicleViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate>
 @end

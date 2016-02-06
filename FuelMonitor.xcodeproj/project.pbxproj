@@ -23,6 +23,8 @@
 		57B503B81C6509A5006A3E78 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B503B71C6509A5006A3E78 /* MainViewController.m */; };
 		57B503BD1C6524EA006A3E78 /* VehicleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57B503BC1C6524EA006A3E78 /* VehicleCell.xib */; };
 		57B503C01C652873006A3E78 /* VehicleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 57B503BF1C652873006A3E78 /* VehicleCell.m */; };
+		57D228F01C663C440059F9DE /* add-photo-placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 57D228EF1C663C440059F9DE /* add-photo-placeholder.png */; };
+		57D228F21C6645F50059F9DE /* placeholder.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 57D228F11C6645F50059F9DE /* placeholder.jpg */; };
 		8F745F23D89EA6920B55E157 /* libPods-FuelMonitor.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1183A3DCEA61B0659D30772B /* libPods-FuelMonitor.a */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +80,8 @@
 		57B503BC1C6524EA006A3E78 /* VehicleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VehicleCell.xib; sourceTree = "<group>"; };
 		57B503BE1C652873006A3E78 /* VehicleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VehicleCell.h; sourceTree = "<group>"; };
 		57B503BF1C652873006A3E78 /* VehicleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VehicleCell.m; sourceTree = "<group>"; };
+		57D228EF1C663C440059F9DE /* add-photo-placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "add-photo-placeholder.png"; sourceTree = "<group>"; };
+		57D228F11C6645F50059F9DE /* placeholder.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = placeholder.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +180,8 @@
 		579DA7781C63A12D009B83C6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				57D228F11C6645F50059F9DE /* placeholder.jpg */,
+				57D228EF1C663C440059F9DE /* add-photo-placeholder.png */,
 				579DA7791C63A12D009B83C6 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -332,6 +338,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57D228F01C663C440059F9DE /* add-photo-placeholder.png in Resources */,
+				57D228F21C6645F50059F9DE /* placeholder.jpg in Resources */,
 				57B503BD1C6524EA006A3E78 /* VehicleCell.xib in Resources */,
 				579DA7881C63A12E009B83C6 /* LaunchScreen.storyboard in Resources */,
 				579DA7851C63A12D009B83C6 /* Assets.xcassets in Resources */,

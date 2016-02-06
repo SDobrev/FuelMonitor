@@ -13,6 +13,7 @@
 @interface AddVehicleViewController ()
 - (IBAction)save:(id)sender;
 - (IBAction)cancel:(id)sender;
+
 @property (weak, nonatomic) IBOutlet UIImageView *vehicleImageView;
 @property (weak, nonatomic) IBOutlet UITextField *makeTextField;
 @property (weak, nonatomic) IBOutlet UITextField *modelTextField;
@@ -25,12 +26,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Add Vehicle";
+    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapDetected)];
+    singleTap.numberOfTapsRequired = 1;
+    [_vehicleImageView setUserInteractionEnabled:YES];
+    [_vehicleImageView addGestureRecognizer:singleTap];
+
+}
+
+-(void)tapDetected{
+    [self showPhotoLibary];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
 - (void)showPhotoLibary
 {
     if (([UIImagePickerController isSourceTypeAvailable:
@@ -47,6 +58,8 @@
     // Hides the controls for moving & scaling pictures
     mediaUI.allowsEditing = NO;
     
+    mediaUI.delegate = self;
+    
     [self.navigationController presentModalViewController: mediaUI animated: YES];
 }
 
@@ -56,12 +69,14 @@
     [vehicle setObject: self.makeTextField.text forKey:@"make"];
     [vehicle setObject: self.modelTextField.text forKey:@"model"];
     [vehicle setObject: self.yearTextField.text forKey:@"year"];
-     vehicle.ACL = [PFACL ACLWithUser:[PFUser currentUser]];
+
     // Recipe image
-//    NSData *imageData = UIImageJPEGRepresentation(_vehicleImageView.image, 0.8);
-//    NSString *filename = [NSString stringWithFormat:@"%@.png", _modelTextField.text];
-//    PFFile *imageFile = [PFFile fileWithName:filename data:imageData];
-//    [recipe setObject: imageFile forKey:@"imageFile"];
+    NSData *imageData = UIImageJPEGRepresentation(_vehicleImageView.image, 0.8);
+    NSString *filename = [NSString stringWithFormat:@"%@.png", _modelTextField.text];
+    PFFile *imageFile = [PFFile fileWithName:filename data:imageData];
+    [vehicle setObject: imageFile forKey:@"imageFile"];
+    
+     vehicle.ACL = [PFACL ACLWithUser:[PFUser currentUser]];
     
 //    // Show progress
 //    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
@@ -91,6 +106,15 @@
         }
         
     }];
+}
+
+- (void) imagePickerController: (UIImagePickerController *) picker didFinishPickingMediaWithInfo: (NSDictionary *) info {
+    
+    UIImage *originalImage = (UIImage *) [info objectForKey:UIImagePickerControllerOriginalImage];
+    self.vehicleImageView.image = originalImage;
+    
+    [picker dismissViewControllerAnimated:YES completion:nil];
+    
 }
 
 - (IBAction)cancel:(id)sender {

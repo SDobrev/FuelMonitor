@@ -9,6 +9,7 @@
 #import "MainViewController.h"
 #import <ParseUI/ParseUI.h>
 #import "DMVehicle.h"
+#import "VehicleCell.h"
 
 @interface MainViewController ()
 
@@ -16,20 +17,6 @@
 
 @implementation MainViewController
 
-//- (id)initWithStyle:(UITableViewStyle)style {
-//    self = [super initWithStyle:style];
-//    if (self) {
-//        // This table displays items in the Todo class
-//        self.parseClassName = @"Vehicles";
-//        self.pullToRefreshEnabled = YES;
-//        self.paginationEnabled = NO;
-//        self.objectsPerPage = 25;
-//    }
-//    return self;
-//}- (void)viewDidLoad {
-//    [super viewDidLoad];
-//    // Do any additional setup after loading the view.
-//}
 - (id)initWithCoder:(NSCoder *)aCoder
 {
     self = [super initWithCoder:aCoder];
@@ -53,9 +40,24 @@
     }
     return self;
 }
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    PFUser *currentUser = [PFUser currentUser];
+    if (!currentUser) {
+        PFLogInViewController *logInViewController = [[PFLogInViewController alloc] init];
+    logInViewController.delegate = self;
+    [self presentViewController:logInViewController animated:YES completion:nil];
+    }
+    
+    UIBarButtonItem *logoutBarButton = [[UIBarButtonItem alloc]
+                                        initWithTitle:@"Logout"
+                                        style: UIBarButtonItemStylePlain
+                                            target:self
+                                            action:@selector(logoutUser)];
+    
+ //   self.navigationItem.leftBarButtonItem = logoutBarButton;
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(refreshTable:)
@@ -65,7 +67,6 @@
 
 - (void)refreshTable:(NSNotification *) notification
 {
-    // Reload the recipes
     [self loadObjects];
 }
 
@@ -81,6 +82,7 @@
 {
     return (interfaceOrientation != UIInterfaceOrientationPortraitUpsideDown);
 }
+
 - (PFQuery *)queryForTable
 {
     PFQuery *query = [PFQuery queryWithClassName:self.parseClassName];
@@ -91,29 +93,32 @@
      query.cachePolicy = kPFCachePolicyCacheThenNetwork;
      }*/
     
-    //    [query orderByAscending:@"name"];
+       [query orderByDescending:@"createdAt"];
     
     return query;
 }
 
-
-
-// Override to customize the look of a cell representing an object. The default is to display
-// a UITableViewCellStyleDefault style cell with the label being the first key in the object.
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object
 {
     static NSString *simpleTableIdentifier = @"VehicleCell";
+    VehicleCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
+        cell = [[[NSBundle mainBundle] loadNibNamed:@"VehicleCell" owner:self options:nil] objectAtIndex:0];
     }
     
-    // Configure the cell
-    UILabel *makeLabel = (UILabel*) [cell viewWithTag:100];
-    makeLabel.text = [object objectForKey:@"make"];
-    UILabel *modelLabel = (UILabel*) [cell viewWithTag:101];
-    modelLabel.text = [object objectForKey:@"model"];
+        cell.modelLabel.text = [object objectForKey:@"model"];
+        cell.yearLabel.text = [object objectForKey:@"year"];
+        cell.consumptionLabel.text =[object objectForKey:@"avgConsumption"];
+    
+        //image
+        PFFile *thumbnail = [object objectForKey:@"imageFile"];
+        PFImageView *thumbnailImageView = (PFImageView*)cell.cellImageView;
+        thumbnailImageView.image = [UIImage imageNamed:@"placeholder.jpg"];
+        thumbnailImageView.file = thumbnail;
+        [thumbnailImageView loadInBackground];
+
+    
     return cell;
 }
 
@@ -125,28 +130,12 @@
         [self refreshTable:nil];
     }];
 }
-//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath object:(PFObject *)object
-//{
-//    static NSString *simpleTableIdentifier = @"VehicleCell";
-//    
-//    VehicleCell *cell = [tableView dequeueReusableCellWithIdentifier:simpleTableIdentifier];
-//    if (cell == nil) {
-//        cell = [[[NSBundle mainBundle] loadNibNamed:@"VehicleCell" owner:self options:nil] objectAtIndex:0];
-//        //        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:simpleTableIdentifier];
-//    }
-//    
-//    // Configure the cell
-//    //    UILabel *makeLabel = (UILabel*) [cell viewWithTag:100];
-//    //    makeLabel.text = [object objectForKey:@"make"];
-//    //    UILabel *modelLabel = (UILabel*) [cell viewWithTag:101];
-//    //    modelLabel.text = [object objectForKey:@"model"];
-//    
-//    cell.modelLabel.text = @"sadas";
-//    //    cell.modelLabel.text = [object objectForKey:@"model"];
-//    //    cell.yearLabel.text = [object objectForKey:@"year"];
-//    
-//    return cell;
-//}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 120;
+}
+
 - (void) objectsDidLoad:(NSError *)error
 {
     [super objectsDidLoad:error];
@@ -154,15 +143,10 @@
     NSLog(@"error: %@", [error localizedDescription]);
 }
 
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+- (void) logoutUser{
+    [PFUser logOut];
+    PFLogInViewController *logInViewController = [[PFLogInViewController alloc] init];
+    logInViewController.delegate = self;
+    [self presentViewController:logInViewController animated:YES completion:nil];
 }
-*/
-
 @end

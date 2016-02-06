@@ -21,11 +21,23 @@
     [super viewDidLoad];
     self.title = @"Cars List";
     
-    UIBarButtonItem *loginBarButton =
-    [[UIBarButtonItem alloc]
-     initWithBarButtonSystemItem:UIBarButtonSystemItemAction
-     target:self
-     action:@selector(showLogin)];
+
+    
+    UIBarButtonItem *loginBarButton;
+    
+    PFUser *currentUser = [PFUser currentUser];
+    if (currentUser) {
+        loginBarButton = [[UIBarButtonItem alloc]
+                          initWithBarButtonSystemItem:UIBarButtonSystemItemAction
+                          target:self
+                          action:@selector(logoutUser)];
+    } else {
+        loginBarButton = [[UIBarButtonItem alloc]
+         initWithBarButtonSystemItem:UIBarButtonSystemItemAction
+         target:self
+         action:@selector(showLogin)];
+    }
+
     
     UIBarButtonItem *addVehicleBarButton = [[UIBarButtonItem alloc]
                                         initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
@@ -55,6 +67,13 @@
 }
 
 - (void) showLogin{
+    PFLogInViewController *logInViewController = [[PFLogInViewController alloc] init];
+    logInViewController.delegate = self;
+    [self presentViewController:logInViewController animated:YES completion:nil];
+}
+
+- (void) logoutUser{
+    [PFUser logOut];
     PFLogInViewController *logInViewController = [[PFLogInViewController alloc] init];
     logInViewController.delegate = self;
     [self presentViewController:logInViewController animated:YES completion:nil];
