@@ -45,7 +45,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
+    self.title = @"Fuelings List";
     UIBarButtonItem *addFuelingBarButton = [[UIBarButtonItem alloc]
                                             initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
                                             target:self
@@ -100,15 +100,19 @@
     if (cell == nil) {
         cell = [[[NSBundle mainBundle] loadNibNamed:@"FuelingCell" owner:self options:nil] objectAtIndex:0];
     }
-  //  NSLog([object objectForKey:@"trip"]);
-    cell.tripLabel.text = @"test";
-//    
-//      cell.tripLabel.text = [object objectForKey:@"trip"];
-//    cell.consumptionLabel.text = [object objectForKey:@"vehicleId"];
-//    cell.dateLabel.text =[object objectForKey:@"quantity"];
-//    cell.priceLiterLabel.text = [object objectForKey:@"price"];
     
+    NSNumber *price = [object objectForKey:@"price"];
+    NSNumber *quantity = [object objectForKey:@"quantity"];
+    NSNumber *trip = [object objectForKey:@"trip"];
+    NSDate *date = [object objectForKey:@"createdAt"];
     
+    NSNumber *consumption = @([quantity doubleValue] / ([trip doubleValue] /100));
+    NSNumber *priceLiter = @([price integerValue] / [quantity integerValue]);
+    
+    cell.tripLabel.text =[NSString stringWithFormat:@"Trip: %@", trip];
+    cell.consumptionLabel.text = [NSString stringWithFormat:@"%@ l/100", consumption];
+    cell.dateLabel.text = [NSString stringWithFormat:@"Date: %@", date];
+    cell.priceLiterLabel.text = [NSString stringWithFormat:@"Liter price: %@", priceLiter];
     
     return cell;
 }
@@ -140,7 +144,6 @@
     
     AddFuelEntryViewController *addFuelVC = [self.storyboard instantiateViewControllerWithIdentifier:storyBoardId];
     addFuelVC.vehicleId = objectId;
-    NSLog(objectId);
     [self.navigationController pushViewController:addFuelVC animated:YES];
 }
 

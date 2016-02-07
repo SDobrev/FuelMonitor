@@ -10,9 +10,15 @@
 
 @interface CurrentPricesViewController ()
 
+@property (weak, nonatomic) IBOutlet UILabel *dieselTextField;
+@property (weak, nonatomic) IBOutlet UILabel *gasolineTextField;
+@property (weak, nonatomic) IBOutlet UILabel *lpgTextField;
+@property (weak, nonatomic) IBOutlet UILabel *methaneTextField;
+
 @end
 
 @implementation CurrentPricesViewController
+//http://fuelo.net/api/price?key=beb5cdf4554ce11&fuel=gasoline
 
 - (void)viewDidLoad {
     [super viewDidLoad];

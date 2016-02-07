@@ -13,6 +13,8 @@
 #import "AddVehicleViewController.h"
 #import "FuelingsViewController.h"
 
+#import "FuelMonitor-Swift.h"
+
 @interface MainViewController ()
 
 @end
@@ -46,6 +48,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.title = @"Vehicle list";
     PFUser *currentUser = [PFUser currentUser];
     if (!currentUser) {
         PFLogInViewController *logInViewController = [[PFLogInViewController alloc] init];
@@ -71,6 +74,9 @@
                                              selector:@selector(refreshTable:)
                                                  name:@"refreshTable"
                                                object:nil];
+    HttpData *myClass = [[HttpData alloc] init];
+    myClass.property = @"Hello!";
+    [myClass method];
 }
 
 - (void)refreshTable:(NSNotification *) notification
@@ -123,7 +129,7 @@
         //image
         PFFile *thumbnail = [object objectForKey:@"imageFile"];
         PFImageView *thumbnailImageView = (PFImageView*)cell.cellImageView;
-        thumbnailImageView.image = [UIImage imageNamed:@"placeholder.jpg"];
+        thumbnailImageView.image = [UIImage imageNamed:@"placeholder.png"];
         thumbnailImageView.file = thumbnail;
         [thumbnailImageView loadInBackground];
 
@@ -147,7 +153,6 @@
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    NSLog(@"Vehicle selected");
     PFObject *myObject = [self.objects objectAtIndex:indexPath.row];
     NSString *objectId = [myObject objectId];
 
@@ -155,7 +160,6 @@
     
     FuelingsViewController *fuelingsVC = [self.storyboard instantiateViewControllerWithIdentifier:storyBoardId];
     fuelingsVC.vehicleId = objectId;
-    NSLog(objectId);
     [self.navigationController pushViewController:fuelingsVC animated:YES];
 }
 
