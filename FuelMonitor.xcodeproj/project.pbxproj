@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		57574CFF1C67392600E1DCB0 /* FuelingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57574CFE1C67392600E1DCB0 /* FuelingsViewController.m */; };
+		57574D051C6766BA00E1DCB0 /* FuelingCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 57574D031C6766BA00E1DCB0 /* FuelingCell.m */; };
+		57574D061C6766BA00E1DCB0 /* FuelingCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 57574D041C6766BA00E1DCB0 /* FuelingCell.xib */; };
 		575C8B511C63C3960048105C /* DMVehicle.m in Sources */ = {isa = PBXBuildFile; fileRef = 575C8B501C63C3960048105C /* DMVehicle.m */; };
 		575C8B551C63C3E80048105C /* DMFuelEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 575C8B541C63C3E80048105C /* DMFuelEntry.m */; };
 		575C8B581C63C9C60048105C /* AddVehicleViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 575C8B571C63C9C60048105C /* AddVehicleViewController.m */; };
@@ -49,6 +52,11 @@
 		003A753C7A307DA840C4E35E /* Pods-FuelMonitor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FuelMonitor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FuelMonitor/Pods-FuelMonitor.debug.xcconfig"; sourceTree = "<group>"; };
 		1183A3DCEA61B0659D30772B /* libPods-FuelMonitor.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FuelMonitor.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EFE9C5B1A224F52EEEC66E0 /* Pods-FuelMonitor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FuelMonitor.release.xcconfig"; path = "Pods/Target Support Files/Pods-FuelMonitor/Pods-FuelMonitor.release.xcconfig"; sourceTree = "<group>"; };
+		57574CFD1C67392600E1DCB0 /* FuelingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FuelingsViewController.h; sourceTree = "<group>"; };
+		57574CFE1C67392600E1DCB0 /* FuelingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FuelingsViewController.m; sourceTree = "<group>"; };
+		57574D021C6766BA00E1DCB0 /* FuelingCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FuelingCell.h; sourceTree = "<group>"; };
+		57574D031C6766BA00E1DCB0 /* FuelingCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FuelingCell.m; sourceTree = "<group>"; };
+		57574D041C6766BA00E1DCB0 /* FuelingCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FuelingCell.xib; sourceTree = "<group>"; };
 		575C8B4F1C63C3960048105C /* DMVehicle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMVehicle.h; sourceTree = "<group>"; };
 		575C8B501C63C3960048105C /* DMVehicle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DMVehicle.m; sourceTree = "<group>"; };
 		575C8B531C63C3E80048105C /* DMFuelEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DMFuelEntry.h; sourceTree = "<group>"; };
@@ -134,6 +142,8 @@
 				575C8B5D1C63CCF60048105C /* AddFuelEntryViewController.m */,
 				57B503B61C6509A5006A3E78 /* MainViewController.h */,
 				57B503B71C6509A5006A3E78 /* MainViewController.m */,
+				57574CFD1C67392600E1DCB0 /* FuelingsViewController.h */,
+				57574CFE1C67392600E1DCB0 /* FuelingsViewController.m */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -211,6 +221,9 @@
 				57B503BC1C6524EA006A3E78 /* VehicleCell.xib */,
 				57B503BE1C652873006A3E78 /* VehicleCell.h */,
 				57B503BF1C652873006A3E78 /* VehicleCell.m */,
+				57574D021C6766BA00E1DCB0 /* FuelingCell.h */,
+				57574D031C6766BA00E1DCB0 /* FuelingCell.m */,
+				57574D041C6766BA00E1DCB0 /* FuelingCell.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -338,6 +351,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57574D061C6766BA00E1DCB0 /* FuelingCell.xib in Resources */,
 				57D228F01C663C440059F9DE /* add-photo-placeholder.png in Resources */,
 				57D228F21C6645F50059F9DE /* placeholder.jpg in Resources */,
 				57B503BD1C6524EA006A3E78 /* VehicleCell.xib in Resources */,
@@ -422,7 +436,9 @@
 				579DA77A1C63A12D009B83C6 /* main.m in Sources */,
 				57B503B81C6509A5006A3E78 /* MainViewController.m in Sources */,
 				575C8B511C63C3960048105C /* DMVehicle.m in Sources */,
+				57574D051C6766BA00E1DCB0 /* FuelingCell.m in Sources */,
 				57B503C01C652873006A3E78 /* VehicleCell.m in Sources */,
+				57574CFF1C67392600E1DCB0 /* FuelingsViewController.m in Sources */,
 				575C8B5E1C63CCF60048105C /* AddFuelEntryViewController.m in Sources */,
 				575C8B5B1C63CCAB0048105C /* CurrentPricesViewController.m in Sources */,
 				575C8B581C63C9C60048105C /* AddVehicleViewController.m in Sources */,

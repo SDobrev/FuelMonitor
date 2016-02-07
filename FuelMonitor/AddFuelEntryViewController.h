@@ -10,4 +10,6 @@
 
 @interface AddFuelEntryViewController : UIViewController
 
+@property (strong, nonatomic) NSString *vehicleId;
+
 @end

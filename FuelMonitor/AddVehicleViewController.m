@@ -69,14 +69,15 @@
     [vehicle setObject: self.makeTextField.text forKey:@"make"];
     [vehicle setObject: self.modelTextField.text forKey:@"model"];
     [vehicle setObject: self.yearTextField.text forKey:@"year"];
-
+    PFUser *user = [PFUser currentUser];
+    vehicle[@"user"] = user;
     // Recipe image
+    
     NSData *imageData = UIImageJPEGRepresentation(_vehicleImageView.image, 0.8);
     NSString *filename = [NSString stringWithFormat:@"%@.png", _modelTextField.text];
     PFFile *imageFile = [PFFile fileWithName:filename data:imageData];
     [vehicle setObject: imageFile forKey:@"imageFile"];
     
-     vehicle.ACL = [PFACL ACLWithUser:[PFUser currentUser]];
     
 //    // Show progress
 //    MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];

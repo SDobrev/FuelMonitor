@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *tripTextField;
 @property (weak, nonatomic) IBOutlet UITextField *priceTextField;
 
+
 @end
 
 @implementation AddFuelEntryViewController
@@ -40,7 +41,7 @@
     fueling[@"quantity"] = @(quantity);
     fueling[@"trip"] = @(trip);
     fueling[@"price"] = @(price);
-    fueling.ACL = [PFACL ACLWithUser:[PFUser currentUser]];
+    fueling[@"vehicleId"] = _vehicleId;
     
     // Upload fueling to Parse
     [fueling saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
@@ -69,17 +70,5 @@
 - (IBAction)cancel:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
 }
-
-
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

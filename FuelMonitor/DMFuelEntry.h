@@ -13,5 +13,6 @@
 @property double *quantity;
 @property double *trip;
 @property double *price;
+@property double *vehicleId;
 
 @end

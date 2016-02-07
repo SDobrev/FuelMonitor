@@ -13,5 +13,6 @@
 @synthesize quantity;
 @synthesize trip;
 @synthesize price;
+@synthesize vehicleId;
 
 @end

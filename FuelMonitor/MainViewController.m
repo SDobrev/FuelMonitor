@@ -10,6 +10,8 @@
 #import <ParseUI/ParseUI.h>
 #import "DMVehicle.h"
 #import "VehicleCell.h"
+#import "AddVehicleViewController.h"
+#import "FuelingsViewController.h"
 
 @interface MainViewController ()
 
@@ -57,7 +59,13 @@
                                             target:self
                                             action:@selector(logoutUser)];
     
- //   self.navigationItem.leftBarButtonItem = logoutBarButton;
+    UIBarButtonItem *addVehicleBarButton = [[UIBarButtonItem alloc]
+                                            initWithBarButtonSystemItem:UIBarButtonSystemItemAdd
+                                            target:self
+                                            action:@selector(showAddVehicle)];
+    
+    self.navigationItem.leftBarButtonItem = logoutBarButton;
+    self.navigationItem.rightBarButtonItem = addVehicleBarButton;
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(refreshTable:)
@@ -92,8 +100,9 @@
     /*    if ([self.objects count] == 0) {
      query.cachePolicy = kPFCachePolicyCacheThenNetwork;
      }*/
-    
-       [query orderByDescending:@"createdAt"];
+    PFUser *user = [PFUser currentUser];
+    [query whereKey:@"user" equalTo:user];
+    [query orderByDescending:@"createdAt"];
     
     return query;
 }
@@ -136,6 +145,21 @@
     return 120;
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    NSLog(@"Vehicle selected");
+    PFObject *myObject = [self.objects objectAtIndex:indexPath.row];
+    NSString *objectId = [myObject objectId];
+
+    NSString *storyBoardId = @"fuelingsScene";
+    
+    FuelingsViewController *fuelingsVC = [self.storyboard instantiateViewControllerWithIdentifier:storyBoardId];
+    fuelingsVC.vehicleId = objectId;
+    NSLog(objectId);
+    [self.navigationController pushViewController:fuelingsVC animated:YES];
+}
+
+
 - (void) objectsDidLoad:(NSError *)error
 {
     [super objectsDidLoad:error];
@@ -148,5 +172,12 @@
     PFLogInViewController *logInViewController = [[PFLogInViewController alloc] init];
     logInViewController.delegate = self;
     [self presentViewController:logInViewController animated:YES completion:nil];
+}
+
+- (void) showAddVehicle {
+    NSString *storyBoardId = @"addVehicleScene";
+    AddVehicleViewController *addVehicleViewController =
+    [self.storyboard instantiateViewControllerWithIdentifier:storyBoardId];
+    [self.navigationController pushViewController:addVehicleViewController animated:YES];
 }
 @end
