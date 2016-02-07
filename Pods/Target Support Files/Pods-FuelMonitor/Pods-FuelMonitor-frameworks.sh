@@ -82,3 +82,16 @@ strip_invalid_archs() {
   fi
 }
 
+
+if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-FuelMonitor/Alamofire.framework"
+  install_framework "Pods-FuelMonitor/Bolts.framework"
+  install_framework "Pods-FuelMonitor/Parse.framework"
+  install_framework "Pods-FuelMonitor/ParseUI.framework"
+fi
+if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-FuelMonitor/Alamofire.framework"
+  install_framework "Pods-FuelMonitor/Bolts.framework"
+  install_framework "Pods-FuelMonitor/Parse.framework"
+  install_framework "Pods-FuelMonitor/ParseUI.framework"
+fi

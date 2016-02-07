@@ -29,7 +29,7 @@
 		57D9CF391C678572003445C6 /* HttpData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D9CF381C678572003445C6 /* HttpData.swift */; };
 		57FC8E271C67A01A00B2B5AA /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 57FC8E261C67A01A00B2B5AA /* placeholder.png */; };
 		57FC8E291C67A1E500B2B5AA /* fuel.png in Resources */ = {isa = PBXBuildFile; fileRef = 57FC8E281C67A1E500B2B5AA /* fuel.png */; };
-		8F745F23D89EA6920B55E157 /* libPods-FuelMonitor.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1183A3DCEA61B0659D30772B /* libPods-FuelMonitor.a */; };
+		7741BA1AF48AF657BA974CD3 /* Pods_FuelMonitor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64B6786566A1D106D6AF030E /* Pods_FuelMonitor.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,7 +51,6 @@
 
 /* Begin PBXFileReference section */
 		003A753C7A307DA840C4E35E /* Pods-FuelMonitor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FuelMonitor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FuelMonitor/Pods-FuelMonitor.debug.xcconfig"; sourceTree = "<group>"; };
-		1183A3DCEA61B0659D30772B /* libPods-FuelMonitor.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-FuelMonitor.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EFE9C5B1A224F52EEEC66E0 /* Pods-FuelMonitor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FuelMonitor.release.xcconfig"; path = "Pods/Target Support Files/Pods-FuelMonitor/Pods-FuelMonitor.release.xcconfig"; sourceTree = "<group>"; };
 		57574CFD1C67392600E1DCB0 /* FuelingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FuelingsViewController.h; sourceTree = "<group>"; };
 		57574CFE1C67392600E1DCB0 /* FuelingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FuelingsViewController.m; sourceTree = "<group>"; };
@@ -92,6 +91,7 @@
 		57D9CF3A1C6785D4003445C6 /* FuelMonitor-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FuelMonitor-Bridging-Header.h"; sourceTree = "<group>"; };
 		57FC8E261C67A01A00B2B5AA /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
 		57FC8E281C67A1E500B2B5AA /* fuel.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fuel.png; sourceTree = "<group>"; };
+		64B6786566A1D106D6AF030E /* Pods_FuelMonitor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FuelMonitor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8F745F23D89EA6920B55E157 /* libPods-FuelMonitor.a in Frameworks */,
+				7741BA1AF48AF657BA974CD3 /* Pods_FuelMonitor.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,7 +243,7 @@
 		EB35CCB4CE639BD14640230C /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				1183A3DCEA61B0659D30772B /* libPods-FuelMonitor.a */,
+				64B6786566A1D106D6AF030E /* Pods_FuelMonitor.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

@@ -7,6 +7,7 @@
 //
 
 #import "CurrentPricesViewController.h"
+#import "FuelMonitor-Swift.h"
 
 @interface CurrentPricesViewController ()
 
@@ -23,6 +24,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Current Prices";
+    
+    HttpData *prices = [[HttpData alloc] init];
+    NSString *gasoline = @"gasoline";
+    [prices httpRequest:gasoline];
+    double pricee = prices.price;    
+    self.gasolineTextField.text = [NSString stringWithFormat:@"%f",pricee];
 }
 
 - (void)didReceiveMemoryWarning {

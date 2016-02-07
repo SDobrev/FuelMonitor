@@ -7,22 +7,26 @@
 //
 
 import Foundation
+import Alamofire
 
 @objc class HttpData: NSObject {
-    var property:String = ""
-    func method() {
-        print(self.property)
+    var price:Double = 0
+    
+    func httpRequest (param: String){
+        let url = "http://fuelo.net/api/price?key=beb5cdf4554ce11&fuel=" + param;
+        Alamofire.request(.GET, url, parameters: ["foo": "bar"])
+            .responseJSON { response in
+                
+                if let JSON = response.result.value {
+                    print("JSON: \(JSON)")
+                    
+                    let response = JSON as! NSDictionary
+                    
+                    //example if there is an id
+                    let fuelPrice = response.objectForKey("price")
+                    self.price = fuelPrice as! Double
+                }
+        }
     }
     
-    let url = "http://api.myawesomeapp.com"
-    Alamofire.request(.GET, url).responseJSON { response in
-    switch response.result {
-    case .Success(let data):
-    let json = JSON(data)
-    let name = json["name"].stringValue
-    print(name)
-    case .Failure(let error):
-    print("Request failed with error: \(error)")
-    }
-    }
 }

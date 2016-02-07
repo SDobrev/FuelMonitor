@@ -13,7 +13,7 @@
 #import "AddVehicleViewController.h"
 #import "FuelingsViewController.h"
 
-#import "FuelMonitor-Swift.h"
+
 
 @interface MainViewController ()
 
@@ -74,9 +74,7 @@
                                              selector:@selector(refreshTable:)
                                                  name:@"refreshTable"
                                                object:nil];
-    HttpData *myClass = [[HttpData alloc] init];
-    myClass.property = @"Hello!";
-    [myClass method];
+
 }
 
 - (void)refreshTable:(NSNotification *) notification

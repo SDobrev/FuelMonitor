@@ -1,4 +1,5 @@
 PODS:
+  - Alamofire (3.1.5)
   - Bolts/Tasks (1.6.0)
   - Parse (1.12.0):
     - Bolts/Tasks (~> 1.5)
@@ -7,9 +8,11 @@ PODS:
     - Parse (~> 1.9)
 
 DEPENDENCIES:
+  - Alamofire (~> 3.0)
   - ParseUI
 
 SPEC CHECKSUMS:
+  Alamofire: 5f730ba29fd113b7ddd71c1e65d0c630acf5d7b0
   Bolts: f52a250053bb517ca874523c3913776359ab3def
   Parse: de2c52a9a1421b91ae7594ab8ce191afd184f19b
   ParseUI: af2eba584799da4a9fbdac0e178662d7438b502e

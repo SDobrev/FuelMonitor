@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '88D5AD0915CF49A9DBA26D8D'
+               BlueprintIdentifier = '432EB6D7D00ACE11136626F5'
                BlueprintName = 'Pods-FuelMonitor'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'libPods-FuelMonitor.a'>
+               BuildableName = 'Pods_FuelMonitor.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
