@@ -26,10 +26,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Current Prices";
-    self.dieselTextField.text = @"1.78";
-    self.gasolineTextField.text = @"1.82";
-    self.lpgTextField.text = @"0.88";
-    self.methaneTextField.text = @"1.58";
+    self.dieselTextField.text = @"0.00";
+    self.gasolineTextField.text = @"0.00";
+    self.lpgTextField.text = @"0.00";
+    self.methaneTextField.text = @"0.00";
 }
 
 - (void)didReceiveMemoryWarning {
@@ -41,6 +41,10 @@
     HttpData *prices = [[HttpData alloc] init];
     NSString *gasoline = @"gasoline";
     [prices httpRequest:gasoline];
+    self.dieselTextField.text = @"1.78";
+    self.gasolineTextField.text = @"1.82";
+    self.lpgTextField.text = @"0.88";
+    self.methaneTextField.text = @"1.58";
 }
 
 @end

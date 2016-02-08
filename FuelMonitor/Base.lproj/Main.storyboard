@@ -310,7 +310,7 @@
                                     <constraint firstAttribute="height" constant="60" id="AOD-nX-PEI"/>
                                 </constraints>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Save Vehicle"/>
+                                <state key="normal" title="Get Prices"/>
                                 <connections>
                                     <action selector="getPrices:" destination="tGC-iE-b6m" eventType="touchUpInside" id="kUy-pT-CtA"/>
                                 </connections>
