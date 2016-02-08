@@ -15,31 +15,31 @@
                 <rect key="frame" x="0.0" y="0.0" width="341" height="250"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Model" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u9r-b6-O2P">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Model" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u9r-b6-O2P">
                         <rect key="frame" x="157" y="8" width="179" height="34"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="34" id="gj6-8c-0Gz"/>
                         </constraints>
-                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vv5-mz-3h5">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Year" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vv5-mz-3h5">
                         <rect key="frame" x="157" y="46" width="179" height="158"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Consumption" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jwS-dv-OOH">
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Consumption" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jwS-dv-OOH">
                         <rect key="frame" x="157" y="212" width="179" height="33"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="it0-Rk-hLM" customClass="PFImageView">
-                        <rect key="frame" x="0.0" y="0.0" width="149" height="250"/>
+                        <rect key="frame" x="0.0" y="0.0" width="128" height="250"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="149" id="A59-XH-7NH"/>
+                            <constraint firstAttribute="width" constant="128" id="A59-XH-7NH"/>
                         </constraints>
                     </imageView>
                 </subviews>
@@ -50,7 +50,7 @@
                     <constraint firstItem="it0-Rk-hLM" firstAttribute="centerY" secondItem="vv5-mz-3h5" secondAttribute="centerY" id="BiT-8x-FVV"/>
                     <constraint firstItem="vv5-mz-3h5" firstAttribute="top" secondItem="u9r-b6-O2P" secondAttribute="bottom" constant="4" id="CMy-m3-9Aq"/>
                     <constraint firstItem="vv5-mz-3h5" firstAttribute="leading" secondItem="jwS-dv-OOH" secondAttribute="leading" id="HsJ-P8-Dde"/>
-                    <constraint firstItem="u9r-b6-O2P" firstAttribute="leading" secondItem="it0-Rk-hLM" secondAttribute="trailing" constant="8" symbolic="YES" id="IHy-a3-nDe"/>
+                    <constraint firstItem="u9r-b6-O2P" firstAttribute="leading" secondItem="it0-Rk-hLM" secondAttribute="trailing" constant="29" id="IHy-a3-nDe"/>
                     <constraint firstItem="jwS-dv-OOH" firstAttribute="top" secondItem="vv5-mz-3h5" secondAttribute="bottom" constant="8" symbolic="YES" id="TcY-cQ-DcN"/>
                     <constraint firstItem="u9r-b6-O2P" firstAttribute="leading" secondItem="vv5-mz-3h5" secondAttribute="leading" id="VAI-bD-LxU"/>
                     <constraint firstItem="u9r-b6-O2P" firstAttribute="top" secondItem="rLd-L3-OhF" secondAttribute="topMargin" id="dqt-cN-z34"/>
@@ -60,7 +60,7 @@
                     <constraint firstItem="it0-Rk-hLM" firstAttribute="leading" secondItem="rLd-L3-OhF" secondAttribute="leading" id="pY9-hu-1CX"/>
                 </constraints>
             </tableViewCellContentView>
-            <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
             <connections>
                 <outlet property="cellImageView" destination="it0-Rk-hLM" id="1d3-6t-QT7"/>
                 <outlet property="consumptionLabel" destination="jwS-dv-OOH" id="HAI-rz-vN9"/>

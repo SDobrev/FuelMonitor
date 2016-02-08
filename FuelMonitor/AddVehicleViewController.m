@@ -9,10 +9,10 @@
 #import "AddVehicleViewController.h"
 #import <MobileCoreServices/UTCoreTypes.h>
 #import <Parse/Parse.h>
+#import "MainViewController.h"
 
 @interface AddVehicleViewController ()
 - (IBAction)save:(id)sender;
-- (IBAction)cancel:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UIImageView *vehicleImageView;
 @property (weak, nonatomic) IBOutlet UITextField *makeTextField;
@@ -26,14 +26,15 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Add Vehicle";
-    UITapGestureRecognizer *singleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapDetected)];
-    singleTap.numberOfTapsRequired = 1;
+    UILongPressGestureRecognizer  *hold = [[UILongPressGestureRecognizer  alloc] initWithTarget:self action:@selector(holdDetected)];
+    hold.minimumPressDuration = 1.0f;
+    hold.allowableMovement = 100.f;
     [_vehicleImageView setUserInteractionEnabled:YES];
-    [_vehicleImageView addGestureRecognizer:singleTap];
+    [_vehicleImageView addGestureRecognizer:hold];
 
 }
 
--(void)tapDetected{
+-(void)holdDetected{
     [self showPhotoLibary];
 }
 
@@ -64,6 +65,16 @@
 }
 
 - (IBAction)save:(id)sender {
+
+    
+    if([self.makeTextField.text  isEqual: @""] || self.modelTextField.text == @"")  {
+        UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Invalid data"
+                                                                       message:@"Please fill make and model!"
+                                                                preferredStyle:UIAlertControllerStyleAlert];
+        [self presentViewController:alert animated:YES completion:nil];
+        [self dismissViewControllerAnimated:YES completion:nil];
+    } else{
+    
     // Create PFObject with vehicle information
     PFObject *vehicle = [PFObject objectWithClassName:@"Vehicle"];
     [vehicle setObject: self.makeTextField.text forKey:@"make"];
@@ -71,7 +82,8 @@
     [vehicle setObject: self.yearTextField.text forKey:@"year"];
     PFUser *user = [PFUser currentUser];
     vehicle[@"user"] = user;
-    // Recipe image
+    
+    // Vehicle image
     
     NSData *imageData = UIImageJPEGRepresentation(_vehicleImageView.image, 0.8);
     NSString *filename = [NSString stringWithFormat:@"%@.png", _modelTextField.text];
@@ -91,22 +103,28 @@
         
         if (!error) {
             // Show success message
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Upload Complete" message:@"Successfully saved the vehicle" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-            [alert show];
-            
-            // Notify table view to reload the recipes from Parse cloud
+            UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Upload Complete!"
+                                                                           message:@"Successfully saved the vehicle!"
+                                                                    preferredStyle:UIAlertControllerStyleAlert];
+            [self presentViewController:alert animated:YES completion:nil];
+
+            // Notify table view to reload the vehicles from Parse cloud
             [[NSNotificationCenter defaultCenter] postNotificationName:@"refreshTable" object:self];
             
             // Dismiss the controller
             [self dismissViewControllerAnimated:YES completion:nil];
+           
             
         } else {
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Upload Failure" message:[error localizedDescription] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-            [alert show];
-            
+            UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Upload Failure"
+                                                                           message:[error localizedDescription]
+                                                                    preferredStyle:UIAlertControllerStyleAlert];
+            [self presentViewController:alert animated:YES completion:nil];
+            [self dismissViewControllerAnimated:YES completion:nil];
         }
         
     }];
+}
 }
 
 - (void) imagePickerController: (UIImagePickerController *) picker didFinishPickingMediaWithInfo: (NSDictionary *) info {
@@ -116,10 +134,6 @@
     
     [picker dismissViewControllerAnimated:YES completion:nil];
     
-}
-
-- (IBAction)cancel:(id)sender {
-    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

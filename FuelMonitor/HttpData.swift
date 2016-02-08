@@ -10,7 +10,6 @@ import Foundation
 import Alamofire
 
 @objc class HttpData: NSObject {
-    var price:Double = 0
     
     func httpRequest (param: String){
         let url = "http://fuelo.net/api/price?key=beb5cdf4554ce11&fuel=" + param;
@@ -21,12 +20,11 @@ import Alamofire
                     print("JSON: \(JSON)")
                     
                     let response = JSON as! NSDictionary
-                    
-                    //example if there is an id
                     let fuelPrice = response.objectForKey("price")
-                    self.price = fuelPrice as! Double
+                    let price = fuelPrice as! Double
+                    
+                    print(price)
                 }
         }
     }
-    
 }

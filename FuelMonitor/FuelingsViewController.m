@@ -109,6 +109,9 @@
     NSNumber *consumption = @([quantity doubleValue] / ([trip doubleValue] /100));
     NSNumber *priceLiter = @([price integerValue] / [quantity integerValue]);
     
+    [cell.contentView.layer setBorderColor:[UIColor grayColor].CGColor];
+    [cell.contentView.layer setBorderWidth:1.5f];
+    
     cell.tripLabel.text =[NSString stringWithFormat:@"Trip: %@", trip];
     cell.consumptionLabel.text = [NSString stringWithFormat:@"%@ l/100", consumption];
     cell.dateLabel.text = [NSString stringWithFormat:@"Date: %@", date];

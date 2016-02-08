@@ -74,7 +74,7 @@
                     <constraint firstItem="dGe-3c-lD0" firstAttribute="leading" secondItem="jiw-4V-qg6" secondAttribute="trailing" constant="89" id="z2e-9h-fmK"/>
                 </constraints>
             </tableViewCellContentView>
-            <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="0.59238401073619629" colorSpace="calibratedRGB"/>
+            <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
             <connections>
                 <outlet property="consumptionLabel" destination="xpc-HN-fNQ" id="O8Y-Zt-tTM"/>
                 <outlet property="dateLabel" destination="PZh-b9-YHA" id="FxY-Ge-669"/>

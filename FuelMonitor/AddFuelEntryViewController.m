@@ -37,6 +37,14 @@
     double trip = (double)[self.tripTextField.text doubleValue];
     double price = (double)[self.priceTextField.text doubleValue];
     
+    if(quantity <= 0 || trip <= 0 || price < 0)  {
+        UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Invalid data"
+                                                                       message:@"Quantity, trip or price cannot be < 0!"
+                                                                preferredStyle:UIAlertControllerStyleAlert];
+        [self presentViewController:alert animated:YES completion:nil];
+        [self dismissViewControllerAnimated:YES completion:nil];
+    } else{
+    
     PFObject *fueling = [PFObject objectWithClassName:@"Fueling"];
     fueling[@"quantity"] = @(quantity);
     fueling[@"trip"] = @(trip);
@@ -49,22 +57,27 @@
         
         if (!error) {
             // Show success message
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Upload Complete" message:@"Successfully saved the fueling" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-            [alert show];
+            UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Upload Complete!"
+                                                                           message:@"Successfully saved the fuel entry!"
+                                                                    preferredStyle:UIAlertControllerStyleAlert];
+            [self presentViewController:alert animated:YES completion:nil];
             
-            // Notify table view to reload the fueling from Parse cloud
             [[NSNotificationCenter defaultCenter] postNotificationName:@"refreshTable" object:self];
             
             // Dismiss the controller
             [self dismissViewControllerAnimated:YES completion:nil];
             
         } else {
-            UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Upload Failure" message:[error localizedDescription] delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil, nil];
-            [alert show];
+            UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Upload Failure"
+                                                                           message:[error localizedDescription]
+                                                                    preferredStyle:UIAlertControllerStyleAlert];
+            [self presentViewController:alert animated:YES completion:nil];
+            [self dismissViewControllerAnimated:YES completion:nil];
             
         }
         
     }];
+    }
 }
 
 - (IBAction)cancel:(id)sender {

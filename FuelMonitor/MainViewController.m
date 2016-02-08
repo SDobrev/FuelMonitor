@@ -12,6 +12,8 @@
 #import "VehicleCell.h"
 #import "AddVehicleViewController.h"
 #import "FuelingsViewController.h"
+#import "CurrentPricesViewController.h"
+#import "LoginViewController.h"
 
 
 
@@ -51,7 +53,7 @@
     self.title = @"Vehicle list";
     PFUser *currentUser = [PFUser currentUser];
     if (!currentUser) {
-        PFLogInViewController *logInViewController = [[PFLogInViewController alloc] init];
+        LoginViewController *logInViewController = [[LoginViewController alloc] init];
     logInViewController.delegate = self;
     [self presentViewController:logInViewController animated:YES completion:nil];
     }
@@ -67,8 +69,14 @@
                                             target:self
                                             action:@selector(showAddVehicle)];
     
+    UIBarButtonItem *currentPricesBarButton = [[UIBarButtonItem alloc]
+                                               initWithTitle:@"Prices"
+                                               style: UIBarButtonItemStylePlain
+                                               target:self
+                                               action:@selector(showCurrentPrices)];
+    
     self.navigationItem.leftBarButtonItem = logoutBarButton;
-    self.navigationItem.rightBarButtonItem = addVehicleBarButton;
+    self.navigationItem.rightBarButtonItems = [[NSArray alloc] initWithObjects: addVehicleBarButton,currentPricesBarButton,nil];
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(refreshTable:)
@@ -105,8 +113,10 @@
      query.cachePolicy = kPFCachePolicyCacheThenNetwork;
      }*/
     PFUser *user = [PFUser currentUser];
-    [query whereKey:@"user" equalTo:user];
-    [query orderByDescending:@"createdAt"];
+        if (user) {
+            [query whereKey:@"user" equalTo:user];
+            [query orderByDescending:@"createdAt"];
+        }
     
     return query;
 }
@@ -119,18 +129,18 @@
     if (cell == nil) {
         cell = [[[NSBundle mainBundle] loadNibNamed:@"VehicleCell" owner:self options:nil] objectAtIndex:0];
     }
+    [cell.contentView.layer setBorderColor:[UIColor grayColor].CGColor];
+    [cell.contentView.layer setBorderWidth:1.5f];
+    cell.modelLabel.text = [object objectForKey:@"model"];
+    cell.yearLabel.text = [object objectForKey:@"year"];
+    cell.consumptionLabel.text =[object objectForKey:@"avgConsumption"];
     
-        cell.modelLabel.text = [object objectForKey:@"model"];
-        cell.yearLabel.text = [object objectForKey:@"year"];
-        cell.consumptionLabel.text =[object objectForKey:@"avgConsumption"];
-    
-        //image
-        PFFile *thumbnail = [object objectForKey:@"imageFile"];
-        PFImageView *thumbnailImageView = (PFImageView*)cell.cellImageView;
-        thumbnailImageView.image = [UIImage imageNamed:@"placeholder.png"];
-        thumbnailImageView.file = thumbnail;
-        [thumbnailImageView loadInBackground];
-
+    //image
+    PFFile *thumbnail = [object objectForKey:@"imageFile"];
+    PFImageView *thumbnailImageView = (PFImageView*)cell.cellImageView;
+    thumbnailImageView.image = [UIImage imageNamed:@"placeholder.png"];
+    thumbnailImageView.file = thumbnail;
+    [thumbnailImageView loadInBackground];
     
     return cell;
 }
@@ -171,7 +181,7 @@
 
 - (void) logoutUser{
     [PFUser logOut];
-    PFLogInViewController *logInViewController = [[PFLogInViewController alloc] init];
+    LoginViewController *logInViewController = [[LoginViewController alloc] init];
     logInViewController.delegate = self;
     [self presentViewController:logInViewController animated:YES completion:nil];
 }
@@ -181,5 +191,12 @@
     AddVehicleViewController *addVehicleViewController =
     [self.storyboard instantiateViewControllerWithIdentifier:storyBoardId];
     [self.navigationController pushViewController:addVehicleViewController animated:YES];
+}
+
+- (void) showCurrentPrices {
+    NSString *storyBoardId = @"currentPricesScene";
+    CurrentPricesViewController *currentPricesViewController =
+    [self.storyboard instantiateViewControllerWithIdentifier:storyBoardId];
+    [self.navigationController pushViewController:currentPricesViewController animated:YES];
 }
 @end

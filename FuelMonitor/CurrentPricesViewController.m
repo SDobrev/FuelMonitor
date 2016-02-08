@@ -9,7 +9,9 @@
 #import "CurrentPricesViewController.h"
 #import "FuelMonitor-Swift.h"
 
+
 @interface CurrentPricesViewController ()
+- (IBAction)getPrices:(id)sender;
 
 @property (weak, nonatomic) IBOutlet UILabel *dieselTextField;
 @property (weak, nonatomic) IBOutlet UILabel *gasolineTextField;
@@ -24,17 +26,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Current Prices";
-    
-    HttpData *prices = [[HttpData alloc] init];
-    NSString *gasoline = @"gasoline";
-    [prices httpRequest:gasoline];
-    double pricee = prices.price;    
-    self.gasolineTextField.text = [NSString stringWithFormat:@"%f",pricee];
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (IBAction)getPrices:(id)sender {
+    HttpData *prices = [[HttpData alloc] init];
+    NSString *gasoline = @"gasoline";
+    [prices httpRequest:gasoline];
 }
 
 @end
