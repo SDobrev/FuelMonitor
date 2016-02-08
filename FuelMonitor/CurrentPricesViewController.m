@@ -26,6 +26,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = @"Current Prices";
+    self.dieselTextField.text = @"1.78";
+    self.gasolineTextField.text = @"1.82";
+    self.lpgTextField.text = @"0.88";
+    self.methaneTextField.text = @"1.58";
 }
 
 - (void)didReceiveMemoryWarning {

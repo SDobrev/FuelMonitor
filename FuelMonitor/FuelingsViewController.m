@@ -104,18 +104,24 @@
     NSNumber *price = [object objectForKey:@"price"];
     NSNumber *quantity = [object objectForKey:@"quantity"];
     NSNumber *trip = [object objectForKey:@"trip"];
-    NSDate *date = [object objectForKey:@"createdAt"];
     
     NSNumber *consumption = @([quantity doubleValue] / ([trip doubleValue] /100));
-    NSNumber *priceLiter = @([price integerValue] / [quantity integerValue]);
+    NSNumber *priceLiter = @([price doubleValue] / [quantity doubleValue]);
+    double priceDouble = [priceLiter doubleValue];
+    double consDouble = [consumption doubleValue];
+    
+    NSDate *created = [object createdAt];
+    NSDateFormatter *dateFormat = [[NSDateFormatter alloc] init];
+    [dateFormat setDateFormat:@"MMM d, h:mm a"];
+    cell.dateLabel.text = [NSString stringWithFormat:@"%@", [dateFormat stringFromDate:created]];
     
     [cell.contentView.layer setBorderColor:[UIColor grayColor].CGColor];
     [cell.contentView.layer setBorderWidth:1.5f];
     
     cell.tripLabel.text =[NSString stringWithFormat:@"Trip: %@", trip];
-    cell.consumptionLabel.text = [NSString stringWithFormat:@"%@ l/100", consumption];
-    cell.dateLabel.text = [NSString stringWithFormat:@"Date: %@", date];
-    cell.priceLiterLabel.text = [NSString stringWithFormat:@"Liter price: %@", priceLiter];
+    cell.consumptionLabel.text = [NSString stringWithFormat:@"%.2lf l/100", consDouble];
+ //   cell.dateLabel.text = dateString;
+    cell.priceLiterLabel.text = [NSString stringWithFormat:@"Liter price: %.2lf", priceDouble];
     
     return cell;
 }

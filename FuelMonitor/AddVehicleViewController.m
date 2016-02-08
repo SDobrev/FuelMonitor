@@ -61,13 +61,12 @@
     
     mediaUI.delegate = self;
     
-    [self.navigationController presentModalViewController: mediaUI animated: YES];
-}
+    [self presentViewController:mediaUI animated:YES completion:NULL];}
 
 - (IBAction)save:(id)sender {
 
     
-    if([self.makeTextField.text  isEqual: @""] || self.modelTextField.text == @"")  {
+    if([self.makeTextField.text  isEqual: @""] || [self.modelTextField.text isEqual: @""])  {
         UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Invalid data"
                                                                        message:@"Please fill make and model!"
                                                                 preferredStyle:UIAlertControllerStyleAlert];

@@ -50,7 +50,7 @@
     fueling[@"trip"] = @(trip);
     fueling[@"price"] = @(price);
     fueling[@"vehicleId"] = _vehicleId;
-    
+  //  fueling[@"consumption"] = @([quantity doubleValue] / ([trip doubleValue] /100));
     // Upload fueling to Parse
     [fueling saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
         //       [hud hide:YES];

@@ -303,7 +303,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ql1-rT-FqY">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ql1-rT-FqY">
                                 <rect key="frame" x="50" y="520" width="500" height="60"/>
                                 <color key="backgroundColor" red="0.0" green="1" blue="0.0" alpha="0.5" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -323,11 +323,13 @@
                             <constraint firstItem="Rcj-Iu-dKI" firstAttribute="baseline" secondItem="dGp-UV-fHa" secondAttribute="baseline" id="4tb-1G-0mP"/>
                             <constraint firstItem="aqS-0F-kdd" firstAttribute="leading" secondItem="OV2-7N-l4G" secondAttribute="leading" id="5c2-AX-cKo"/>
                             <constraint firstItem="dGp-UV-fHa" firstAttribute="leading" secondItem="dVx-ko-jZX" secondAttribute="leading" id="6eI-DB-SRt"/>
+                            <constraint firstAttribute="bottom" secondItem="Ql1-rT-FqY" secondAttribute="bottom" constant="20" symbolic="YES" id="8mA-5X-Bo2"/>
                             <constraint firstItem="Rcj-Iu-dKI" firstAttribute="leading" secondItem="zJt-vc-OTU" secondAttribute="leading" id="EG4-0I-JgQ"/>
                             <constraint firstItem="Rcj-Iu-dKI" firstAttribute="trailing" secondItem="jD9-fS-oxk" secondAttribute="trailing" id="Iub-ds-U0E"/>
                             <constraint firstItem="aqS-0F-kdd" firstAttribute="trailing" secondItem="dGp-UV-fHa" secondAttribute="trailing" id="Ldn-lU-FZb"/>
                             <constraint firstItem="dVx-ko-jZX" firstAttribute="firstBaseline" secondItem="jD9-fS-oxk" secondAttribute="firstBaseline" id="Lro-JQ-0TW"/>
                             <constraint firstItem="zJt-vc-OTU" firstAttribute="top" secondItem="GGX-e4-Ezw" secondAttribute="bottom" constant="8" symbolic="YES" id="Mwx-5d-E1k"/>
+                            <constraint firstItem="Ql1-rT-FqY" firstAttribute="centerX" secondItem="Iqb-ZM-Uqd" secondAttribute="centerX" id="SmO-ac-JSB"/>
                             <constraint firstItem="jD9-fS-oxk" firstAttribute="top" secondItem="Rcj-Iu-dKI" secondAttribute="bottom" constant="16" id="TcY-b8-vjT"/>
                             <constraint firstItem="dVx-ko-jZX" firstAttribute="trailing" secondItem="dGp-UV-fHa" secondAttribute="trailing" id="U4x-Kr-QMS"/>
                             <constraint firstItem="a7s-13-uWw" firstAttribute="top" secondItem="jD9-fS-oxk" secondAttribute="bottom" constant="114" id="UBg-s6-yld"/>
@@ -343,6 +345,7 @@
                             <constraint firstItem="GGX-e4-Ezw" firstAttribute="trailing" secondItem="zJt-vc-OTU" secondAttribute="trailing" id="lvA-kF-24i"/>
                             <constraint firstItem="OV2-7N-l4G" firstAttribute="leading" secondItem="GGX-e4-Ezw" secondAttribute="trailing" id="n25-KI-V9h"/>
                             <constraint firstItem="jD9-fS-oxk" firstAttribute="leading" secondItem="Rcj-Iu-dKI" secondAttribute="leading" id="rBC-uc-WH7"/>
+                            <constraint firstItem="Ql1-rT-FqY" firstAttribute="leading" secondItem="Iqb-ZM-Uqd" secondAttribute="leadingMargin" constant="30" id="rU5-fb-2TR"/>
                             <constraint firstItem="OV2-7N-l4G" firstAttribute="baseline" secondItem="GGX-e4-Ezw" secondAttribute="baseline" id="uPS-Mn-fA7"/>
                             <constraint firstItem="dGp-UV-fHa" firstAttribute="leading" secondItem="aqS-0F-kdd" secondAttribute="leading" id="vqG-k0-Jh2"/>
                             <constraint firstItem="OV2-7N-l4G" firstAttribute="firstBaseline" secondItem="GGX-e4-Ezw" secondAttribute="firstBaseline" id="woa-Cs-boa"/>
